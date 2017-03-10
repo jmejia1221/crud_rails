@@ -21,7 +21,6 @@ gem 'annotate'
 
 gem 'hirb'
 
-gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -57,8 +56,8 @@ group :development do
 end
 
 group :production do
-    gem 'pg'
-    gem 'rails_12factor'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
