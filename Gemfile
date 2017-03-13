@@ -23,6 +23,7 @@ gem 'hirb'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "font-awesome-rails"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

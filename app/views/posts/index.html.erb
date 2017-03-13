@@ -16,8 +16,11 @@
                 <td><%= f.title %></td>
                 <td><%= f.description %></td>
                 <td>
-                    <%= link_to 'View', post_path(id: f.id) %>
-                    <%= link_to 'Edit', edit_post_path(id: f.id) %>
+                    <!-- <%= link_to 'View', post_path(id: f.id) %> -->
+                    <%= link_to post_path(id: f.id) do %>
+                        <i class="fa fa-eye"></i>
+                    <% end %> -
+                    <%= link_to 'Edit', edit_post_path(id: f.id) %> - 
                     <%= link_to 'Delete', f, method: :delete, data: { confirm: 'Are you sure you want to delete the post ?' } %>
                 </td>
             </tr>
