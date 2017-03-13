@@ -21,6 +21,8 @@ gem 'annotate'
 
 gem 'hirb'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
