@@ -1,31 +1,35 @@
-<h1>List Post</h1>
-
-<table border="1" style="width: 100%">
-    <thead style="text-align: center">
-        <tr>
-            <td><strong>Author</strong></td>
-            <td><strong>Title</strong></td>
-            <td><strong>Description</strong></td>
-            <td><strong>Options</strong></td>
-        </tr>
-    </thead>
-    <tbody>
-        <% @posts.each do |f| %>
-            <tr>
-                <td><%= f.author %></td>
-                <td><%= f.title %></td>
-                <td><%= f.description %></td>
-                <td>
-                    <!-- <%= link_to 'View', post_path(id: f.id) %> -->
-                    <%= link_to post_path(id: f.id) do %>
-                        <i class="fa fa-eye"></i>
-                    <% end %> -
-                    <%= link_to 'Edit', edit_post_path(id: f.id) %> - 
-                    <%= link_to 'Delete', f, method: :delete, data: { confirm: 'Are you sure you want to delete the post ?' } %>
-                </td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
-
-<%= link_to "Create Post", new_post_path %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>List Post</h1>
+            <%= link_to "Create Post", new_post_path, class: "btn btn-success" %>
+            <table border="1" class="table table-responsive table-condensed">
+                <thead style="text-align: center">
+                    <tr>
+                        <td><strong>Author</strong></td>
+                        <td><strong>Title</strong></td>
+                        <td><strong>Description</strong></td>
+                        <td><strong>Options</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @posts.each do |f| %>
+                        <tr>
+                            <td><%= f.author %></td>
+                            <td><%= f.title %></td>
+                            <td><%= f.description %></td>
+                            <td>
+                                <!-- <%= link_to 'View', post_path(id: f.id) %> -->
+                                <%= link_to post_path(id: f.id) do %>
+                                    <i class="fa fa-eye"></i>
+                                <% end %> -
+                                <%= link_to 'Edit', edit_post_path(id: f.id) %> -
+                                <%= link_to 'Delete', f, method: :delete, data: { confirm: 'Are you sure you want to delete the post ?' } %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
